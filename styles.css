@@ -293,134 +293,66 @@ p{color:var(--muted);line-height:1.72}
 
 /* Global Reach text fit fix */
 .reach-shell{
-  grid-template-columns: 1.28fr 0.72fr !important;
-  gap: 1.6rem !important;
+  display:grid;
+  grid-template-columns: 1.32fr 0.68fr;
+  gap: 1.4rem;
+  overflow: visible;
+  align-items: start;
 }
 
-.reach-shell .copy-block{
-  max-width: none !important;
-  padding-right: .25rem;
-}
-
-.reach-shell .reach-copy,
-.reach-shell .copy-block{
+.reach-copy{
   min-width: 0;
+  max-width: none;
+  padding: 1.35rem 1.35rem 1.2rem 1.35rem;
 }
 
-.reach-shell h2{
-  font-size: clamp(1.72rem, 2.35vw, 2.18rem) !important;
-  line-height: 1.08 !important;
+.reach-copy h2{
+  font-size: clamp(1.55rem, 2.1vw, 2rem);
+  line-height: 1.08;
   letter-spacing: -0.03em;
-  max-width: 16ch;
+  margin-bottom: 0.75rem;
+  max-width: 100%;
 }
 
-.reach-shell p{
-  font-size: 0.96rem !important;
-  line-height: 1.62 !important;
-  max-width: 60ch !important;
+.reach-copy p{
+  font-size: 0.98rem;
+  line-height: 1.66;
+  max-width: 100%;
 }
 
 .reach-map{
-  padding: .8rem !important;
+  min-height: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 0.85rem 0.85rem 0.85rem 0;
+  background: linear-gradient(180deg,#f8fcf9,#eef7f2);
+}
+
+.reach-map img{
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
 }
 
 @media (max-width: 980px){
   .reach-shell{
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .reach-shell h2{
+  .reach-copy{
+    padding: 1.2rem 1.2rem 0.4rem 1.2rem;
+  }
+
+  .reach-map{
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .reach-copy h2,
+  .reach-copy p{
     max-width: 100%;
-  }
-
-  .reach-shell p{
-    max-width: 100% !important;
-  }
-}
-
-
-/* Final Global Reach text clipping fix */
-.reach-shell{
-  overflow: visible !important;
-  align-items: start !important;
-  min-height: auto !important;
-}
-
-.reach-shell .copy-block,
-.reach-shell .reach-copy{
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.reach-shell h2{
-  max-width: none !important;
-  font-size: clamp(1.58rem, 2.1vw, 2rem) !important;
-  line-height: 1.12 !important;
-  margin-bottom: .85rem !important;
-}
-
-.reach-shell p{
-  max-width: none !important;
-  display: block !important;
-  overflow: visible !important;
-  white-space: normal !important;
-  word-break: normal !important;
-}
-
-.reach-shell .copy-block p:last-child{
-  margin-bottom: 0 !important;
-}
-
-.reach-map{
-  align-self: stretch;
-}
-
-@media (max-width: 980px){
-  .reach-shell{
-    overflow: visible !important;
-  }
-  /* === Global Reach text-fit fix === */
-#reach .reach-shell {
-  grid-template-columns: minmax(0, 1.38fr) minmax(320px, 0.62fr) !important;
-  gap: 1.5rem !important;
-  align-items: stretch !important;
-}
-
-#reach .copy-block,
-#reach .reach-copy {
-  min-width: 0 !important;
-  max-width: none !important;
-}
-
-#reach h2 {
-  max-width: 100% !important;
-  font-size: clamp(1.6rem, 2.05vw, 2.05rem) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.028em !important;
-  margin-bottom: 0.8rem !important;
-  text-wrap: balance;
-}
-
-#reach p {
-  max-width: 100% !important;
-  font-size: 0.98rem !important;
-  line-height: 1.66 !important;
-}
-
-#reach .reach-map {
-  padding: 0.9rem !important;
-}
-
-#reach .reach-map img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-}
-
-@media (max-width: 1000px) {
-  #reach .reach-shell {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
   }
 }
 }
